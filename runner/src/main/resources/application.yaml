@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: 'jdbc:h2:file:./testdb;MODE=MySQL;'
+  h2:
+    console:
+      enabled: on
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging:
+  level:
+    pl.edu.wszib: DEBUG
+springdoc:
+  packages-to-scan: pl.edu.wszib.infrastructure.product

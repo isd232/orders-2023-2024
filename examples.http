@@ -1,0 +1,36 @@
+### Get all products
+GET localhost:8080/products
+
+
+### Get product by id
+GET http://localhost:8080/products/5f40cc2e-ff5e-4f30-a767-943b3a268e67
+
+### Create product
+POST http://localhost:8080/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "5f40cc2e-ff5e-4f30-a767-943b3a268e68",
+  "name": "Testowy produkt 3",
+  "price": 20.5,
+  "createdAt": "2024-04-21T14:01:33.658280500Z",
+  "updatedAt": "2024-04-21T14:01:33.658280500Z"
+}
+
+### Create order
+POST http://localhost:8080/orders
+Accept: application/json
+
+### Add line to order
+POST http://localhost:8080/orders/3522e2ef-afc6-461a-b5b4-aad39cc2a498/lines
+Content-Type: application/json
+
+{
+  "productId": "8118a9d2-e96a-41a1-9e67-8db75d38e701",
+  "quantity": 5
+}
+
+### Get order by id
+GET http://localhost:8080/orders/3522e2ef-afc6-461a-b5b4-aad39cc2a498
+Accept: application/json
